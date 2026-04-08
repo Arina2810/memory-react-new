@@ -30,4 +30,11 @@ export default function useGame(){
     //проверка конца игры
     const isWin = finishedItems.length == images.length
 
+    return {
+        finishedItems,
+        stepsCount,
+        isWin,
+        handleReset,
+        checkItems
+    }
 }

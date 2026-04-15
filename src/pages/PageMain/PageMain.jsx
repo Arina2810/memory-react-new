@@ -15,7 +15,7 @@ export default function PageMain() {
                 <Link to="/game">Начать играть</Link>
             </main>
             <footer>
-                <p>&copy; Мухина Юлия, 2026 г.</p>
+                <p>&copy; Буйван Арина, 2026 г.</p>
             </footer>
         </div>
     );

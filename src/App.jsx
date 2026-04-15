@@ -9,7 +9,7 @@ import Item from './components/Item'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/memory-react-new'>
       <Routes>
         <Route path='/' element={<PageMain />} />
         <Route path='/game' element={<PageGame />} />
@@ -23,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

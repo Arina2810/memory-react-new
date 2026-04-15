@@ -8,9 +8,9 @@ export default function PageMain() {
             <main>
                 <p>Правила игры:</p>
                 <ol className="rules">
-                    <li>Прваило 1</li>
-                    <li>Прваило 2</li>
-                    <li>Прваило 3</li>
+                    <li>Правило 1</li>
+                    <li>Правило 2</li>
+                    <li>Правило 3</li>
                 </ol>
                 <Link to="/game">Начать играть</Link>
             </main>

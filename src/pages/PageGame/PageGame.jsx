@@ -7,12 +7,12 @@ import useGame from "../../components/useGame";
 import Modal from "../../components/Modal/Modal";
 import { useEffect, useState } from "react";
 
-export default function PageGame() 
-{
+export default function PageGame() {
   const [images, setImages] = useState([]);
-  useEffect(()=>{ setImages(data.sort(() => Math.random()- 0.5));
-  },[])
- 
+  useEffect(() => {
+    setImages(data.sort(() => Math.random() - 0.5));
+  }, [])
+
   const {
     finishedItems,
     stepsCount,
@@ -25,33 +25,31 @@ export default function PageGame()
     //перемешиваем массив
     images.sort(() => Math.random() - 0.5)
   }
+
   return (
-    <div className='container'>
+    <>
       <Header />
-      <main>
-        <div className="steps">{stepsCount}</div>
-        <Grid
-        images={images}
-        finishedItems = {finishedItems}
-        checkItems = {checkItems}
-        />
-        {
-        isWin && (
+      <div className='container'>
+        <main>
+          <div className="steps">{stepsCount}</div>
+          <Grid
+            images={images}
+            finishedItems={finishedItems}
+            checkItems={checkItems}
+          />
+          {isWin && (
             <Modal>
               <h3 className="modal-caption">Победа!</h3>
-              <p className="modal-description">Вы собрались все пары за {stepsCount} шагов </p>
+              <p className="modal-description">Вы собрались все пары за {stepsCount} шагов</p>
               <button
-               className="button modal-button"
+                className="button modal-button"
                 onClick={handleBtnReset}
                 type="button">Новая игра
               </button>
             </Modal>
-        )
-        }
-      </main>
-      <footer>
-        <p>&copy; Буйван Арина, 2026 г.</p>
-      </footer>
-    </div>
+          )}
+        </main>
+      </div>
+    </>
   )
 }
